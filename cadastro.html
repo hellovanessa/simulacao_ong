@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONG Esperança - Cadastro</title>
+  <meta name="description" content="Cadastro de voluntários, doadores e apoiadores da ONG." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="Logo da ONG Esperança" />
+        <span>ONG Esperança</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main container">
+    <section class="section">
+      <h1>Cadastro</h1>
+      <p>Preencha o formulário para se cadastrar como voluntário, doador ou apoiador.</p>
+    </section>
+
+    <section class="section">
+      <form id="form-cadastro" class="form">
+        <fieldset class="form__fieldset">
+          <legend>Dados pessoais</legend>
+
+          <div class="form__group">
+            <label for="nome-completo">Nome completo</label>
+            <input id="nome-completo" name="nome" type="text" required minlength="5" />
+          </div>
+
+          <div class="form__group">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form__group">
+            <label for="cpf">CPF</label>
+            <input
+              id="cpf"
+              name="cpf"
+              type="text"
+              inputmode="numeric"
+              maxlength="14"
+              required
+              pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            />
+            <small class="form__hint">Formato: 000.000.000-00</small>
+          </div>
+
+          <div class="form__group">
+            <label for="telefone">Telefone</label>
+            <input
+              id="telefone"
+              name="telefone"
+              type="text"
+              inputmode="tel"
+              maxlength="15"
+              required
+            />
+            <small class="form__hint">Formato: (00) 00000-0000</small>
+          </div>
+
+          <div class="form__group">
+            <label for="data-nascimento">Data de nascimento</label>
+            <input id="data-nascimento" name="dataNascimento" type="date" required />
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend>Endereço</legend>
+
+          <div class="form__group">
+            <label for="cep">CEP</label>
+            <input
+              id="cep"
+              name="cep"
+              type="text"
+              inputmode="numeric"
+              maxlength="9"
+              required
+              pattern="\d{5}-\d{3}"
+            />
+            <small class="form__hint">Formato: 00000-000</small>
+          </div>
+
+          <div class="form__group">
+            <label for="endereco">Endereço</label>
+            <input id="endereco" name="endereco" type="text" required />
+          </div>
+
+          <div class="form__group">
+            <label for="cidade">Cidade</label>
+            <input id="cidade" name="cidade" type="text" required />
+          </div>
+
+          <div class="form__group">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+              <option value="">Selecione</option>
+              <option value="BA">BA</option>
+              <option value="SP">SP</option>
+              <option value="RJ">RJ</option>
+              <option value="MG">MG</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend>Perfil</legend>
+
+          <div class="form__group">
+            <label for="tipo-perfil">Quero me cadastrar como</label>
+            <select id="tipo-perfil" name="perfil" required>
+              <option value="">Selecione</option>
+              <option value="voluntario">Voluntário</option>
+              <option value="doador">Doador</option>
+              <option value="apoiador">Apoiador</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn--primary">Enviar cadastro</button>
+        <p class="form__feedback" id="feedback-cadastro" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© 2025 ONG Esperança</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONG Esperança - Início</title>
+  <meta name="description" content="Plataforma da ONG Esperança: projetos sociais, voluntariado e doações." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logo.png" alt="Logo da ONG Esperança" />
+        <span>ONG Esperança</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="menu">
+          ☰
+        </button>
+        <ul class="nav__list" id="menu">
+          <li><a href="#home" data-route="home">Início</a></li>
+          <li><a href="#projetos" data-route="projetos">Projetos</a></li>
+          <li><a href="#voluntariado" data-route="voluntariado">Voluntariado</a></li>
+          <li><a href="#doacoes" data-route="doacoes">Doações</a></li>
+          <li><a href="#contato" data-route="contato">Contato</a></li>
+          <li><a href="projetos.html">Página Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main container">
+    <section class="page page--active" data-page="home" aria-label="Página inicial">
+      <section class="hero">
+        <div class="hero__text">
+          <h1>Transformando realidades por meio da solidariedade</h1>
+          <p>
+            A ONG Esperança atua em projetos sociais que impactam crianças, famílias e comunidades inteiras.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#voluntariado" data-route="voluntariado">Seja voluntário</a>
+            <a class="btn btn--secondary" href="#doacoes" data-route="doacoes">Doe agora</a>
+          </div>
+        </div>
+        <figure class="hero__image">
+          <img src="assets/img/voluntarios.jpg" alt="Voluntários da ONG em ação" />
+        </figure>
+      </section>
+
+      <section class="grid grid--2col section">
+        <article>
+          <h2>Missão</h2>
+          <p>
+            Promover inclusão social, educação e qualidade de vida por meio de projetos contínuos e sustentáveis.
+          </p>
+        </article>
+        <article>
+          <h2>Visão</h2>
+          <p>
+            Ser referência em impacto social e transparência na gestão de recursos e projetos.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Valores</h2>
+        <ul class="list list--inline">
+          <li class="badge badge--primary">Transparência</li>
+          <li class="badge badge--primary">Empatia</li>
+          <li class="badge badge--primary">Cooperação</li>
+          <li class="badge badge--primary">Responsabilidade</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Relatórios de transparência</h2>
+        <p>Acompanhe a aplicação dos recursos e os resultados dos nossos projetos.</p>
+        <ul class="list">
+          <li><a href="#">Relatório anual 2023 (PDF)</a></li>
+          <li><a href="#">Prestação de contas - Campanha de inverno</a></li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="page" data-page="projetos" aria-label="Projetos sociais">
+      <header class="section">
+        <h1>Projetos sociais</h1>
+        <p>
+          Conheça os principais projetos que a ONG Esperança realiza ao longo do ano.
+        </p>
+      </header>
+
+      <section class="grid grid--3col section" id="projetos-list">
+      </section>
+    </section>
+
+    <section class="page" data-page="voluntariado" aria-label="Portal de voluntariado">
+      <header class="section">
+        <h1>Engajamento de voluntários</h1>
+        <p>
+          Descubra oportunidades de voluntariado e acompanhe seu histórico de participação.
+        </p>
+      </header>
+
+      <section class="section">
+        <h2>Oportunidades abertas</h2>
+        <div class="grid grid--2col" id="voluntariado-list">
+        </div>
+      </section>
+    </section>
+
+    <section class="page" data-page="doacoes" aria-label="Captação de recursos">
+      <header class="section">
+        <h1>Doe e ajude a transformar vidas</h1>
+        <p>
+          Suas doações mantêm nossos projetos ativos e ampliam nosso impacto.
+        </p>
+      </header>
+
+      <section class="section grid grid--2col">
+        <article>
+          <h2>Campanhas ativas</h2>
+          <div id="campanhas-list"></div>
+        </article>
+
+        <article aria-label="Formulário de doações">
+          <h2>Doação rápida</h2>
+          <form class="form" id="form-doacao">
+            <div class="form__group">
+              <label for="nome-doacao">Nome completo</label>
+              <input id="nome-doacao" name="nome" type="text" required />
+            </div>
+            <div class="form__group">
+              <label for="email-doacao">E-mail</label>
+              <input id="email-doacao" name="email" type="email" required />
+            </div>
+            <div class="form__group">
+              <label for="valor-doacao">Valor (R$)</label>
+              <input id="valor-doacao" name="valor" type="number" min="10" step="5" required />
+            </div>
+            <button class="btn btn--primary" type="submit">Contribuir</button>
+            <p class="form__feedback" id="feedback-doacao" aria-live="polite"></p>
+          </form>
+        </article>
+      </section>
+    </section>
+
+    <section class="page" data-page="contato" aria-label="Contato">
+      <header class="section">
+        <h1>Contato</h1>
+        <p>
+          Entre em contato para dúvidas, parcerias e cobertura de imprensa.
+        </p>
+      </header>
+
+      <section class="grid grid--2col section">
+        <article>
+          <h2>Informações institucionais</h2>
+          <p><strong>E-mail:</strong> contato@ongesperanca.org</p>
+          <p><strong>Telefone:</strong> (11) 3333-0000</p>
+          <p><strong>Endereço:</strong> Rua da Esperança, 123 - São Paulo/SP</p>
+        </article>
+        <article>
+          <h2>Redes sociais</h2>
+          <ul class="list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© 2025 ONG Esperança - Todos os direitos reservados</p>
+      <p>Desenvolvido como projeto acadêmico de Desenvolvimento Web</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
